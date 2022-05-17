@@ -19,7 +19,7 @@ console.log(element3[0].innerText);
 // 4.
 
 const element4 = document.getElementsByTagName("h1");
-element4[2].innerText = "Hello everyone";
+element4[2].innerText = "Hello World";
 console.log(element4[2].innerText);
 
 // 5.
@@ -64,46 +64,43 @@ function printValue(){
 }
 
 // 9.
-function form1(){
-    var form = document.createElement("form")
-    form.setAttribute("method","get")
-    form.setAttribute("action","submit")
-    var name = document.createElement("input");
-    name.setAttribute("type","text");
-    name.setAttribute("name","Fullname");
-    name.setAttribute("placeholder","Fullname");
+function form(){
+    var form = document.createElement("form");
+    form.setAttribute("method","get");
+    form.setAttribute("action","submit");
 
-    var email = document.createElement("input");
-    email.setAttribute("type","email");
-    email.setAttribute("name","email");
-    email.setAttribute("placeholder","");
-    email.setAttribute("pattern","");
-    
-    var phoneNo = document.createElement("input");
-    phoneNo.setAttribute("type","tel");
-    phoneNo.setAttribute("name","phoneNo");
-    phoneNo.setAttribute("placeholder","phone number");
-    phoneNo.setAttribute("pattern","");
-  
+var N= document.createElement("input");
+var brr = document.createElement("br");
+N.setAttribute("type","text");
+N.setAttribute("name","Name");
+N.setAttribute("placeholder","name");
 
-    var DOB = document.createElement("input");
-    DOB.setAttribute("type","date");
-    DOB.setAttribute("name","DOB");
-    DOB.setAttribute("placeholder","DOB");
-    DOB.setAttribute("min","");
-  
+var E= document.createElement("input");
+E.setAttribute("type","email");
+E.setAttribute("name","Email");
+E.setAttribute("placeholder","email@prepbytes.com");
+E.setAttribute("pattern","[a-zA-Z0-9]+@prepbyte.com")
 
-    var submit = document.createElement("input")
-    submit.setAttribute("type","submit")
-    submit.setAttribute("value","submit")
-    form.appendChild(name);
-    form.appendChild(email);
-    form.appendChild(phoneNo);
-    form.appendChild(DOB);
-    form.appendChild(submit);
+var P= document.createElement("input");
+P.setAttribute("type","number");
+P.setAttribute("name","Phone no:");
+P.setAttribute("placeholder","Phone number");
+P.setAttribute("maxlength","12");
+P.setAttribute("pattern","[91]{2}[0-9]{10}");
 
-    document.getElementsByClassName("form")[0]
+var DB= document.createElement("input");
+DB.setAttribute("type","date");
+DB.setAttribute("name","DOB");
+DB.setAttribute("placeholder","DOB");
+DB.setAttribute("min","1995-10-30");
+
+form.appendChild(N);
+form.appendChild(E);
+form.appendChild(P);
+form.appendChild(DB);
+form.appendChild(brr);
+
+document.getElementsByClassName("form")[0]
     .appendChild(form);
-   
 }
-form1();
+form();

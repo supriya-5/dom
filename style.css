@@ -5,15 +5,13 @@
 }
 .flex{
     width: 100px;
-    height: 200px;
+    height: 100px;
     color: green;
     background-color: yellowgreen;
     margin: 5px;
 }
 .button{
     border: none;
-    border-radius:10px ;
-    font-size: xx-small;
-   
+    border-radius:10px ; 
 
 }
